@@ -47,7 +47,7 @@ public class ProductService {
 
     public List<AddProductResponseDto> getAllProductsByCatagory(Catagory catagory)
     {
-        List<Product> productList = productRepository.getByCatagory(catagory);
+        List<Product> productList = productRepository.findByCatagory(catagory);
         List<AddProductResponseDto> list = ProductConverter.getAllProducts(productList);
         return list;
     }

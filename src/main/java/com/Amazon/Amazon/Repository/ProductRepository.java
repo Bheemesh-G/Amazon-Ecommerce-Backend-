@@ -13,6 +13,6 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product,Integer> {
 
 
-    @Query(value = "select * from product p where p.catagory=:catagory",nativeQuery = true)
-    List<Product> getByCatagory(Catagory catagory);
+
+    List<Product> findByCatagory(Catagory catagory);
 }
